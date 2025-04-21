@@ -20,7 +20,7 @@ interface Props {
 }
 
 export const SearchBar = ({ onSearch }: Props) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState<string>('');
   const debouncedQuery = useDebounce(inputValue.trim(), 1000);
 
   useEffect(() => {

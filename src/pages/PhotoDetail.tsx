@@ -1,4 +1,4 @@
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import type { PexelsPhoto } from '../types/Pexels';
 import { usePhotoById } from '../hooks/usePhotoById';
@@ -50,7 +50,7 @@ const Info = styled.section`
   flex: 1;
   h2 {
     margin-top: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #333;
   }
   p {
@@ -66,7 +66,7 @@ const Info = styled.section`
 `;
 
 const ImageWrapper = styled.div`
-  flex: 2;
+  flex: 3;
   img {
     width: 100%;
     height: auto;

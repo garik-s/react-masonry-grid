@@ -13,14 +13,14 @@ const LoadMore = styled.div`
   margin-top: 24px;
 `;
 
-export const VirtualizedPhotoList = ( { query }: Props) => {
+export const VirtualizedPhotoList = ({ query }: Props) => {
   const { photos, loading, hasMore, loadPhotos } = usePhotos(query);
 
   const loadMoreRef = useInfiniteScroll(loadPhotos, hasMore);
 
   return (
     <>
-      <MasonryGrid photos={photos} columns={4} />
+      <MasonryGrid photos={photos} columns={4} loading={loading} />
       {loading && <Loading />}
       {hasMore && !loading && <LoadMore ref={loadMoreRef} />}
     </>

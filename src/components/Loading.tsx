@@ -24,7 +24,7 @@ const Spinner = styled.div`
 `;
 
 export const Loading = () => (
-  <SpinnerWrapper>
-    <Spinner />
+  <SpinnerWrapper data-testid="spinner-wrapper">
+    <Spinner data-testid="spinner"/>
   </SpinnerWrapper>
 );
