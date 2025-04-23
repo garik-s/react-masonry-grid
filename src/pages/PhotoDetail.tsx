@@ -18,15 +18,17 @@ const Header = styled.div`
 const BackButton = styled.button`
   background: none;
   border: none;
-  color: #0077cc;
+  color: white;
+  background-color: #0077cc;
+  border-radius: 8px;
   font-size: 16px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
 
   &:hover {
-    color: #005fa3;
+    background-color: #005fa3;
   }
 
   &::before {
@@ -58,7 +60,6 @@ const Info = styled.section`
     color: #555;
     line-height: 1.4;
   }
-
   a {
     color: #0077cc;
     text-decoration: none;
@@ -66,7 +67,7 @@ const Info = styled.section`
 `;
 
 const ImageWrapper = styled.div`
-  flex: 3;
+  flex: 2;
   img {
     width: 100%;
     height: auto;

@@ -13,15 +13,15 @@ const Masonry = styled.div<{ $columns: number }>`
   column-count: ${({ $columns }) => $columns};
   column-gap: 24px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1280px) {
     column-count: ${({ $columns }) => Math.max($columns - 1, 1)};
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     column-count: ${({ $columns }) => Math.max($columns - 2, 1)};
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 640px) {
     column-count: 1;
   }
 `;

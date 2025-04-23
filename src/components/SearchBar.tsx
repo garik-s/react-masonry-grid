@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { useDebounce } from '../hooks/useDebounce'; 
+import { useDebounce } from '../hooks/useDebounce';
 
 const SearchInput = styled.input`
-  width: 320px;
-  padding: 10px 16px;
+  width: 420px;
+  padding: 12px 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
   text-align: left;
 
   &:focus {
-    border-color: #005fa3;
+    border-color: #007aff;
+    outline: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -21,7 +26,7 @@ interface Props {
 
 export const SearchBar = ({ onSearch }: Props) => {
   const [inputValue, setInputValue] = useState<string>('');
-  const debouncedQuery = useDebounce(inputValue.trim(), 1000);
+  const debouncedQuery: string = useDebounce(inputValue.trim(), 1000);
 
   useEffect(() => {
     onSearch(debouncedQuery);

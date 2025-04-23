@@ -13,7 +13,7 @@ const StyledImg = styled.img<{ $loaded: boolean }>`
   transition: opacity 0.3s ease-in-out;
   border-radius: 12px;
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
   }
 `;
 
